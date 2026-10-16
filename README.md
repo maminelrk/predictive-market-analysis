@@ -26,9 +26,9 @@ The evaluation will include **all eligible topics**, including ones that did not
 
 **Historical validity matters:** a document, label, or feature created after a simulated cutoff cannot enter that forecast. Modern pretrained embedding models may contain knowledge of past outcomes; results using them will be reported separately from the strict, time-limited baseline.
 
-### Likely tools
+### Chosen version 1 stack
 
-Python; DuckDB and Parquet for dated data; scikit-learn for TF-IDF, NMF, logistic regression, and evaluation; Sentence Transformers and BERTopic for embedding experiments; LightGBM for forecasting comparisons; and Streamlit for a demonstration. This stack is provisional and will be refined after the data audit.
+Python; DuckDB and Parquet for dated data; scikit-learn TF-IDF + NMF for topic discovery and regularized logistic regression for growth forecasting; chronological evaluation; and Streamlit for the demonstration. See the bilingual [technical decision](docs/technical_decision.md) for the full workflow and limitations. Data scope and outcome labels still depend on the coverage audit.
 
 ### First milestones
 
@@ -59,9 +59,9 @@ L'évaluation inclura **tous les sujets admissibles**, y compris ceux qui ne son
 
 **La validité historique est essentielle :** aucun document, libellé ou signal postérieur à la date simulée ne peut entrer dans la prévision. Les modèles d'embeddings préentraînés récemment peuvent déjà connaître des événements passés ; leurs résultats seront présentés séparément de la méthode de référence strictement limitée aux données de l'époque.
 
-### Outils envisagés
+### Outils retenus pour la version 1
 
-Python ; DuckDB et Parquet pour les données datées ; scikit-learn pour TF-IDF, NMF, la régression logistique et l'évaluation ; Sentence Transformers et BERTopic pour les essais d'embeddings ; LightGBM pour comparer les prévisions ; et Streamlit pour la démonstration. Cette sélection sera affinée après l'audit des données.
+Python ; DuckDB et Parquet pour les données datées ; TF-IDF + NMF de scikit-learn pour découvrir les sujets et régression logistique régularisée pour prévoir leur progression ; évaluation chronologique ; et Streamlit pour la démonstration. La [décision technique](docs/technical_decision.md) détaille le processus et ses limites. Le périmètre des données et les étiquettes de résultat dépendront encore de l'audit de couverture.
 
 ### Premières étapes
 
